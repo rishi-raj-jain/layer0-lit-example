@@ -1,0 +1,35 @@
+{
+  "name": "layer0-lit-example",
+  "scripts": {
+    "layer0:dev": "layer0 dev",
+    "layer0:build": "layer0 build",
+    "layer0:deploy": "layer0 deploy",
+    "layer0:prod": "layer0 run --production",
+    "format": "prettier --write '**/*' --ignore-unknown",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "@lit/reactive-element": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@web/rollup-plugin-copy": "^0.3.0",
+    "@web/rollup-plugin-html": "^1.10.3",
+    "fast-glob": "^3.2.11",
+    "lit": "^2.0.0",
+    "lit-element": "^3.0.0",
+    "lit-html": "^2.0.0",
+    "rollup": "^2.76.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-dev": "^2.0.4",
+    "rollup-plugin-minify-html-literals": "^1.2.6",
+    "rollup-plugin-summary": "^1.4.3",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "devDependencies": {
+    "@layer0/cli": "^4.15.6",
+    "@layer0/core": "^4.15.6",
+    "@layer0/devtools": "^4.15.6",
+    "@layer0/prefetch": "^4.15.6"
+  }
+}

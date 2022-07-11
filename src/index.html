@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <script type="module" src="./simple-greeting.js"></script>
+</head>
+<body>
+  <simple-greeting name="World"></simple-greeting>
+  <script defer type="module">
+    let script = document.createElement('script')
+    script.src = '/__layer0__/cache-manifest.js'
+    document.body.appendChild(script)
+  </script>
+  <script defer type="module" src="./main.js"></script>
+</body>
