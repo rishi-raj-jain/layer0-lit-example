@@ -13,7 +13,7 @@ export default [
     plugins: [
       dev({ port: process.env.PORT || 3000 }),
       replace({
-        'process.env.NODE_ENV': '"production"',
+        'process.env.NODE_ENV': process.env.NODE_ENV,
         'process.env.LAYER0_PREFETCH_HEADER_VALUE': '"1"',
         'process.env.LAYER0_PREFETCH_CACHE_NAME': '"prefetch"',
       }),
@@ -45,6 +45,7 @@ export default [
     ],
     output: {
       dir: 'build',
+      entryFileNames: '[name]-[hash].js',
     },
     preserveEntrySignatures: 'strict',
   },

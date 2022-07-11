@@ -6,8 +6,8 @@
     "layer0:deploy": "layer0 deploy",
     "layer0:prod": "layer0 run --production",
     "format": "prettier --write '**/*' --ignore-unknown",
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "NODE_ENV=development rollup -c -w"
   },
   "dependencies": {
     "@lit/reactive-element": "^1.0.0",
