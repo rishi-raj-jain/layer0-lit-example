@@ -1,5 +1,6 @@
 import minifyHTML from 'rollup-plugin-minify-html-literals'
 import resolve from '@rollup/plugin-node-resolve'
+import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import commonjs from 'rollup-plugin-commonjs'
 import replace from '@rollup/plugin-replace'
@@ -12,6 +13,7 @@ export default [
   {
     plugins: [
       dev({ port: process.env.PORT || 3000 }),
+      livereload('build'),
       replace({
         'process.env.NODE_ENV': process.env.NODE_ENV,
         'process.env.LAYER0_PREFETCH_HEADER_VALUE': '"1"',
